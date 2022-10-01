@@ -1,0 +1,11 @@
+1) curl --header "Content-Type: application/json"   --request GET  http://0.0.0.0:9999/test_get_rules/
+
+2) curl --header "Content-Type: application/json"   --request POST   --data '{"skAcctKey":690989, "transactionID":103828241, "oldMastercategory":"Supplier Expense", "oldCategory":"Supplier Payment", "newMasterCategory":"Transfer", "newCategory":"Transfer btw own accounts" }'  http://0.0.0.0:9999/change_txn_category/
+
+3) curl --header "Content-Type: application/json"   --request POST   --data '{"skAcctKey":10004024 }'  http://0.0.0.0:9999/get_account_categories/
+
+4)  curl --header "Content-Type: application/json"   --request POST   --data '{"skAcctKey":10004024, "transactionID":26549180, "oldMastercategory":"Transfer", "newMaster_Category":"Supplier Expense" }'  http://0.0.0.0:9999/change_txn_category/
+
+5) curl --header "Content-Type: application/json"   --request POST   --data '{"skAcctKey":10004024, "start_date":"2017-07-01","end_date":"2017-07-30" }'  http://0.0.0.0:9999/get_account_categories_timeframe/
+
+6)  curl --header "Content-Type: application/json"   --request POST   --data '{"skAcctKey":10004024 }'  http://0.0.0.0:9999/get_account_casflow/
